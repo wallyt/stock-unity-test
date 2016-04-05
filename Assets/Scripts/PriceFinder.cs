@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 public class PriceFinder : MonoBehaviour {
 
-	private SP500Parser parser;
+	public SP500Parser parser;
 	private Text text;
 
 	void Awake () {

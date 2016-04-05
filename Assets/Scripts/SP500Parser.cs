@@ -7,7 +7,7 @@ public class SP500Parser : MonoBehaviour {
 
 	public TextAsset file;
 
-	void Start() {
+	void Awake() {
 		Load(file);
     }
 

@@ -11,11 +11,11 @@ public class ScatterSpawner : MonoBehaviour {
 	private PriceFinder priceFinder;
 
 	void Start () {
-        priceFinder = GameObject.FindObjectOfType<PriceFinder>();
+		priceFinder = GameObject.FindObjectOfType<PriceFinder>();
+		//float price = (float)priceFinder.GetClosePrice(DateTime.Parse("2016-03-10"));
 
-        //float price = (float)priceFinder.GetClosePrice(DateTime.Parse("2016-03-10"));
+		Dictionary<DateTime, double> closePriceRange = priceFinder.FindClosePricesByDates("2015-01-01", "2015-12-31");
 
-        Dictionary<DateTime, double> closePriceRange = priceFinder.FindClosePricesByDates("2016-01-01", "2016-03-01");
 		double yesterdayClose = 0d;
 
 		// Plot each scatter dot by date, time and whether it was < or > day before
