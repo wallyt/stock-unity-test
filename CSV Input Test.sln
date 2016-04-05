@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{8590F062-0973-C1EE-1FE8-9AC7BA75CEFD}") = "CSV Input Test", "Assembly-CSharp.csproj", "{51C4C0E8-C4FD-CC1E-D1CA-72A86A3C12E5}"
+EndProject
+Project("{8590F062-0973-C1EE-1FE8-9AC7BA75CEFD}") = "CSV Input Test", "Assembly-CSharp-Editor.csproj", "{401C0E37-AA8C-9DFE-5F35-9FD03CEEF460}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51C4C0E8-C4FD-CC1E-D1CA-72A86A3C12E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51C4C0E8-C4FD-CC1E-D1CA-72A86A3C12E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51C4C0E8-C4FD-CC1E-D1CA-72A86A3C12E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51C4C0E8-C4FD-CC1E-D1CA-72A86A3C12E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{401C0E37-AA8C-9DFE-5F35-9FD03CEEF460}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{401C0E37-AA8C-9DFE-5F35-9FD03CEEF460}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{401C0E37-AA8C-9DFE-5F35-9FD03CEEF460}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{401C0E37-AA8C-9DFE-5F35-9FD03CEEF460}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,14 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ScatterSpawner.cs">
+    <Files>
+      <File FileName="Assets/Scripts/PriceFinder.cs" Line="33" Column="60" />
+      <File FileName="Assets/Scripts/SP500Parser.cs" Line="128" Column="9" />
+      <File FileName="Assets/Scripts/ScatterSpawner.cs" Line="17" Column="110" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
