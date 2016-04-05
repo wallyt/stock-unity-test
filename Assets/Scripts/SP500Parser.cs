@@ -3,14 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 
-public class SP500Parser : MonoBehaviour
-{
+public class SP500Parser : MonoBehaviour {
 
 	public TextAsset file;
 
 	void Start() {
 		Load(file);
-	}
+    }
 
 	public class Row
 	{
@@ -125,7 +124,7 @@ public class SP500Parser : MonoBehaviour
 		return rowList.FindAll(x => x.AdjClose == find);
 	}
 	public List<Row> FindAllCloseDateRange(DateTime start, DateTime end) {
-		return rowList.FindAll(x => (x.Date >= start && x.Date <= end));
+        return rowList.FindAll(x => (x.Date >= start && x.Date <= end));
 	}
 
 }

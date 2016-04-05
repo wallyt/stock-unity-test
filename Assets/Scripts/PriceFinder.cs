@@ -9,8 +9,9 @@ public class PriceFinder : MonoBehaviour {
 	private SP500Parser parser;
 	private Text text;
 
-	void Start () {
+	void Awake () {
 		parser = GameObject.FindObjectOfType<SP500Parser>();
+
 //		text = GetComponent<Text>();
 //		TestClosePrice("2016-03-10");
 	}
@@ -30,7 +31,7 @@ public class PriceFinder : MonoBehaviour {
 		return parser.Find_Date(date).Close;
 	}
 
-	public Dictionary<DateTime, double> findClosePricesByDates(string start, string end) {
+	public Dictionary<DateTime, double> FindClosePricesByDates(string start, string end) {
 		Dictionary<DateTime, double> closeDatePrice = new Dictionary<DateTime, double>();
 
 		var results = parser.FindAllCloseDateRange(DateTime.Parse(start), DateTime.Parse(end));
