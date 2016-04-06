@@ -23,13 +23,13 @@ public class ScatterSpawner : MonoBehaviour {
 
 			float dayOfYear = kvp.Key.DayOfYear;
 			float xPos = dayOfYear/365*10;
-			float yPos = (float)kvp.Value/1000;
+			float yPos = (float)kvp.Value/2000;
+			float zPos = 5f;
 
 			GameObject whichDot = kvp.Value >= yesterdayClose ? plusDot : negDot;
 
-			GameObject dot = Instantiate(whichDot, new Vector3(xPos, yPos, 0f), Quaternion.identity) as GameObject;
+			GameObject dot = Instantiate(whichDot, new Vector3(xPos, yPos, zPos), Quaternion.identity) as GameObject;
 			dot.transform.parent = transform;
-
 			// Holder to see if today's close was greater or less than previous day to determine dot color
 			yesterdayClose = kvp.Value;
 		}
