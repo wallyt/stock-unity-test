@@ -23,7 +23,7 @@ public class ScatterSpawner : MonoBehaviour {
 
 			float dayOfYear = kvp.Key.DayOfYear;
 			float xPos = dayOfYear/365*10;
-			float yPos = (float)kvp.Value/2000;
+			float yPos = (float)kvp.Value/1000;
 			float zPos = 5f;
 
 			GameObject whichDot = kvp.Value >= yesterdayClose ? plusDot : negDot;
