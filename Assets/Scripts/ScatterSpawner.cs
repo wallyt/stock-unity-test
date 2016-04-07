@@ -2,6 +2,7 @@
 using System.Collections;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 public class ScatterSpawner : MonoBehaviour {
 
@@ -16,10 +17,11 @@ public class ScatterSpawner : MonoBehaviour {
 
 		Dictionary<DateTime, double> closePriceRange = priceFinder.FindClosePricesByDates("2015-01-01", "2015-12-31");
 
+		// Holder to see if today's close was greater or less than previous day to determine dot color
 		double yesterdayClose = 0d;
 
 		// Plot each scatter dot by date, time and whether it was < or > day before
-		foreach (KeyValuePair<DateTime, double> kvp in closePriceRange) {
+		foreach (KeyValuePair<DateTime, double> kvp in closePriceRange.OrderBy(k => k.Key)) {
 
 			float dayOfYear = kvp.Key.DayOfYear;
 			float xPos = dayOfYear/365*10;
@@ -30,7 +32,8 @@ public class ScatterSpawner : MonoBehaviour {
 
 			GameObject dot = Instantiate(whichDot, new Vector3(xPos, yPos, zPos), Quaternion.identity) as GameObject;
 			dot.transform.parent = transform;
-			// Holder to see if today's close was greater or less than previous day to determine dot color
+			dot.GetComponentInChildren<TextMesh>().text = kvp.Key.ToString("d") + " " + kvp.Value.ToString("F");
+
 			yesterdayClose = kvp.Value;
 		}
 	}
