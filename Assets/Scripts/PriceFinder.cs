@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System;
 using System.Collections.Generic;
+using DictionaryHelper;
 
 public class PriceFinder : MonoBehaviour {
 
@@ -15,11 +16,6 @@ public class PriceFinder : MonoBehaviour {
 //		text = GetComponent<Text>();
 //		TestClosePrice("2016-03-10");
 	}
-	
-
-	void Update () {
-
-	}
 
 	// For SP500 test scene
 //	void TestClosePrice (string date) {
@@ -31,12 +27,12 @@ public class PriceFinder : MonoBehaviour {
 		return parser.Find_Date(date).Close;
 	}
 
-	public Dictionary<DateTime, double> FindClosePricesByDates(string start, string end) {
-		Dictionary<DateTime, double> closeDatePrice = new Dictionary<DateTime, double>();
+	public closeDictionary FindClosePricesByDates(string start, string end) {
+		closeDictionary closeDatePrice = new closeDictionary();
 
 		var results = parser.FindAllCloseDateRange(DateTime.Parse(start), DateTime.Parse(end));
 		foreach(var result in results) {
-			closeDatePrice.Add(result.Date, result.Close);
+			closeDatePrice.Add(result.Date, result.Close, result.Volume);
 		}
 
 		return closeDatePrice;
